@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bhav Culleechurn - Computer Science Student at University of Guelph</title>
+        <style>
+            body {
+                background-color: #0C0C09;
+                font-family: 'Barlow', sans-serif;
+font-family: 'Josefin Sans', sans-serif;
+            }
+
+            .screen {
+                display: flex;
+                flex-direction: column;
+                overflow: hidden;
+                position: relative;
+            }
+
+            .namebox{
+                height: 200px;
+                width: 900px;
+                display: flex;
+                margin-top: 35px;
+                margin-left: 30px;
+                height: 800px;
+                position: relative;
+            }
+
+            .name-title {
+                color: #E7E2E0;
+                font-size: 90px;
+            }
+
+            .subhead {
+                margin-top: 0;
+                font-size: 40px;
+            }
+            
+
+            .links {
+                position: absolute;
+                color: #E7E2E0;
+                bottom: 0;
+            }
+
+            .link {
+                display: inline-block;
+                margin-right: 15px;
+                color: rgb(131, 131, 131);
+                text-decoration: none;
+                transition: color 0.2s ease-in-out,
+                            font-size 0.1s ease-in-out;
+            }
+
+            .link:hover {
+                color: #E7E2E0;
+                cursor: pointer;
+                font-size: 19.5px;
+            }
+
+            .menu {
+                width: 250px;
+                height: 200px;
+                margin-top: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: end;
+            }
+
+            .options {
+                font-size: 20px;
+                color: rgb(131, 131, 131);
+            }
+
+            .about, .projects {
+                transition: color 0.2s ease-in-out,
+                            font-size 0.1s ease-in-out;
+            }
+
+            .about:hover, .projects:hover {
+                color: #E7E2E0;
+                cursor: pointer;
+                font-size: 20.5px;
+            }
+
+            .about-me-card {
+                background-color: rgb(44, 44, 44);
+                position: absolute;
+                width: 750px;
+                height: 350px;
+                margin-top: 18%;
+                left: -1000px;
+                border-radius: 30px;
+                transition: left 0.2s ease-in-out;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .about-me-text {
+                height: 100%;
+                width: 90%;
+                color: #e7e2e09f;
+                line-height: 21px;
+
+            }
+
+            .projects-card {
+                position: absolute;
+                width: 750px;
+                height: 750px;
+                margin-top: 5%;
+                border-radius: 15px;
+                right: -1500px;
+                transition: left 0.2s ease-in-out;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                overflow: hidden;
+                transition: right 0.2s ease-in-out;
+            }
+            .project {
+                width: 95%;
+                height: 150px;
+                border-radius: 15px;
+                display: flex;
+                position: relative;
+                background-color: rgba(59, 59, 59, 0.089);
+                transition: background-color 0.3s ease-in-out,
+                            margin-left 0.1s ease-in-out;
+            }
+
+            .project:hover {
+                background-color: #33333369;
+                cursor: pointer;
+                margin-left: 5px;
+            }
+
+            .project:hover .project-title{
+                color: #E7E2E0;
+            }
+
+            .project:hover .project-image{
+                border-color: #E7E2E0;
+            }
+            
+
+            .project-image {
+                margin-top: 10px;
+                height: 50%;
+                margin-left: 10px;
+                border-radius: 5px;
+                display: inline-block;
+                vertical-align: top;
+                border: solid;
+                border-width: 2px;
+                border-color: rgba(131, 131, 131, 0.253);
+                transition: border-color 0.2s ease-in-out;
+            }
+
+            .project-title {
+                margin-top: 10px;
+                margin-left: 10px;
+                width: 100%;
+                height: 30px;
+                display: block;
+                color: rgb(182, 182, 182);
+                transition: color 0.2s ease-in-out;
+            }
+
+            .project-desc {
+                color: rgb(131, 131, 131);
+                font-weight: 100;
+            }
+            .cursor {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                background-color: #222222;
+                border-radius: 50%;
+                pointer-events: none;
+                transform: translate(-50%, -50%);
+                transition: transform 0.2s ease-out,
+                            background-color 0.3s ease-in-out;
+            }
+
+            .highlight {
+                color: #E7E2E0;
+                transition: color 0.3s ease-in-out;
+            }
+
+            .highlight:hover {
+                cursor: pointer;
+                color: aqua;
+            }
+
+            .pac-man {
+                color: #E7E2E0;
+                transition: color 0.3s ease-in-out;
+            }
+
+            .pac-man:hover {
+                cursor: url('Ghost Pac-man.cur'), auto;
+                color: aqua;
+            }
+            
+
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@700&family=Josefin+Sans&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="cursor"></div>
+        <div class="screen">
+            <div class="namebox">
+                <div class="name-title">
+                    <p style="margin-bottom: 5px;">Bhav Culleechurn</p>
+                    <p class="subhead">Computer Science Student at University of Guelph</p>
+                </div>
+
+                <div class="links" onmouseover="cursor.style.backgroundColor = '#E7E2E0';" onmouseout="cursor.style.backgroundColor = '#222222';">
+                    <a class="link" href="https://www.linkedin.com/in/bhav-culleechurn/" target="_blank">LinkedIn</a>
+                    <a class="link" href="https://github.com/bculleec" target="_blank">GitHub</a>
+                </div>
+
+                <div class="menu">
+                    <div class="options" onmouseover="cursor.style.backgroundColor = '#E7E2E0';" onmouseout="cursor.style.backgroundColor = '#222222';">
+                        <p class="about" onmouseover="peekAboutMe();" onmouseout="peekOutAboutMe();" onmousedown="showAboutMe();">About Me</p>
+                        <p class="projects" onmouseover="peekprojects();" onmouseout="peekOutprojects();" onmousedown="showprojects();">Projects</p>
+                    </div>
+                    
+                    
+                </div>
+            </div>   
+            <div class="about-me-card">
+                <div class="about-me-text">
+                    <p> In 2018, my journey into coding began, fueled by the nostalgic joy of <span class="highlight">PS2 classics</span> like <span class="pac-man">Pac-Man World 2</span> and <span class="highlight">Gran Turismo</span>. Since then, I've immersed myself in <span class="highlight">programming fundamentals</span> as part of my computer science coursework, exploring languages such as <span class="highlight">C, Java, and Python</span>.<br>
+                        <br>
+                        Currently, my passion lies in applying these skills to construct meaningful products with <span class="highlight">real-world applications</span>. Recently, I've delved into <span class="highlight">Python libraries</span>, particularly those associated with <span class="highlight">machine learning technologies</span>, including <span class="highlight">neural networks</span>. As part of a fourth-year academic project with my partner, we successfully developed a <span class="highlight">real-time sign language interpretation model</span>. Additionally, I'm currently engaged in a <span class="highlight">language translation project</span> using <span class="highlight">Next.js</span>.<br>
+                        <br>
+                        Away from the keyboard, you'll find me climbing, running, or indulging in my love for <span class="highlight">retro arcade racers</span>. This blend of technical expertise and real-world interests defines my approach to both coding and life beyond the screen. <br>
+                    </p>
+                </div>
+            </div> 
+
+            <div class="projects-card" onmouseover="cursor.style.backgroundColor = '#E7E2E0';" onmouseout="cursor.style.backgroundColor = '#222222';">
+                <div class="project" onclick="window.open('files/report.pdf', '_blank')" >
+                    <img src="lstm-screenshot.png" class="project-image">
+                    <div class="project-title">
+                        <p class="title">Sign Language Video Recognition with LSTM</p>    
+                        <p class="project-desc">Python project made using Jupyter Notebook to recognize American Sign Language words from real-time video.</p>
+                    </div>
+                </div>
+
+
+                <div class="project" onclick="OpenBoidsProject();" >
+                    <img src="boids-screenshot.png" class="project-image">
+                    <div class="project-title">
+                        <p class="title">Boids Simulation</p>    
+                        <p class="project-desc">Web app for visualizing the flocking behavior of boids. </p>
+                    </div>
+                </div>
+
+
+                <div class="project" onclick="OpenThemeProject();">
+                    <img src="cozy-beige-screenshot.png" class="project-image">
+                    <div class="project-title">
+                        <p class="title">cozy-beige Theme</p>    
+                        <p class="project-desc">A stylistic beige theme for VS Code.</p>
+                    </div>
+                </div>
+
+
+                <div class="project" onclick="OpenToDoProject();">
+                    <img src="to-do-screenshot.png" class="project-image">
+                    <div class="project-title">
+                        <p class="title">to-do-list App</p>    
+                        <p class="project-desc">Web app for creating text notes and To-Dos easily.</p>
+                    </div>
+                </div>
+
+
+                
+            </div>
+        </div>
+        
+
+        <script src="script.js"></script>
+    </body>
+</html>
