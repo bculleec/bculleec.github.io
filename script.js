@@ -55,5 +55,5 @@ function OpenToDoProject() {
 }
 
 function OpenThemeProject() {
-    window.open('https://github.com/bculleec/cozybeige-theme', '_blank');
+    window.open('https://bculleec.github.io/cozy-beige-theme-website/', '_blank');
 }
